@@ -18,7 +18,6 @@ export default {
   name: "Home",
   data() {
     // static data here
-    console.log(this);
     return {
       howMany: 9,
       boxes: [],
@@ -31,8 +30,11 @@ export default {
   },
   mounted() {
     // after mount (like "effect" after everything is done)
-    console.log("mounted");
+    console.log("Home page mounted");
     setTitle(null);
+  },
+  unmounted() {
+    console.log("Home page unmounted");
   },
   methods: {
     // methods here
